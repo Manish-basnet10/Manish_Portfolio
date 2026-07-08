@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* ==========================================
+   THEME TOKENS
+   ========================================== */
+:root {
+  --color-bg: #f7f1e8;
+  --color-navy: #1e2a3a;
+  --color-muted: #5c6b7a;
+  --color-accent: #d97a4a;
+  --color-pill: #e4ddd2;
+  --color-white: #ffffff;
+  --font-heading: 'Baloo 2', cursive;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ==========================================
+   GLOBAL RESET & BASE
+   ========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-navy);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode body */
+html.dark body {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+/* ==========================================
+   DARK MODE OVERRIDES (CSS Variables)
+   ========================================== */
+html.dark {
+  --color-bg: #111827;
+  --color-navy: #f3f4f6;
+  --color-muted: #9ca3af;
+  --color-pill: #1f2937;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+   ========================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   SKIP TO CONTENT LINK (Accessibility)
+   ========================================== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 12px 24px;
+  z-index: 9999;
+  font-weight: 600;
+  border-radius: 0 0 8px 0;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ==========================================
+   FOCUS RING (Accessibility)
+   ========================================== */
+:focus-visible {
+  outline: 2px solid #d97a4a;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ==========================================
+   SCROLL ANIMATION (via JS IntersectionObserver)
+   ========================================== */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animate {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================
+   SECTION SCROLL MARGIN (for sticky navbar)
+   ========================================== */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* ==========================================
+   NAV LINK UNDERLINE ANIMATION (desktop)
+   ========================================== */
+@media (hover: hover) {
+  .nav-link-animated {
+    position: relative;
+  }
+
+  .nav-link-animated::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #d97a4a;
+    transition: width 0.25s ease;
+  }
+
+  .nav-link-animated:hover::after {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   CARD HOVER LIFT (desktop only)
+   ========================================== */
+@media (hover: hover) {
+  .card-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Touch active state */
+.card-hover:active {
+  opacity: 0.92;
+  transform: scale(0.98);
+}
+
+/* ==========================================
+   IMAGE HOVER ZOOM (desktop only)
+   ========================================== */
+@media (hover: hover) {
+  .img-zoom {
+    transition: transform 0.4s ease;
+  }
+
+  .img-zoom:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* ==========================================
+   BUTTON HOVER (desktop only)
+   ========================================== */
+@media (hover: hover) {
+  .btn-primary:hover {
+    filter: brightness(0.9);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary:hover {
+    filter: brightness(0.95);
+    transform: translateY(-1px);
+  }
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+.btn-primary {
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.btn-secondary {
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+/* ==========================================
+   SOCIAL ICON HOVER (desktop only)
+   ========================================== */
+@media (hover: hover) {
+  .social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+}
+
+.social-icon:active {
+  transform: scale(0.92);
+}
+
+.social-icon {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ==========================================
+   SERVICE CARD IMAGE ZOOM (desktop only)
+   ========================================== */
+@media (hover: hover) {
+  .service-card:hover .service-img {
+    transform: scale(1.05);
+  }
+
+  .service-card:hover {
+    border-color: #d97a4a;
+    box-shadow: 0 0 0 2px #d97a4a40, 0 20px 40px rgba(0,0,0,0.2);
+  }
+}
+
+.service-card:active {
+  opacity: 0.92;
+}
+
+.service-img {
+  transition: transform 0.4s ease;
+}
+
+.service-card {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ==========================================
+   CERTIFICATE CARD HOVER (desktop only)
+   ========================================== */
+@media (hover: hover) {
+  .cert-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgba(0,0,0,0.2);
+  }
+
+  .cert-card:hover .cert-img {
+    transform: scale(1.05);
+  }
+}
+
+.cert-card:active {
+  opacity: 0.92;
+}
+
+.cert-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cert-img {
+  transition: transform 0.4s ease;
+}
+
+/* ==========================================
+   FORM INPUTS
+   ========================================== */
+.form-input {
+  width: 100%;
+  background: #2a3547;
+  color: #e5e7eb;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: #6b7280;
+}
+
+.form-input:focus {
+  border-color: #d97a4a;
+  box-shadow: 0 0 0 2px #d97a4a30;
+}
+
+/* ==========================================
+   SCROLLBAR
+   ========================================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d97a4a;
+  border-radius: 3px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+/* ==========================================
+   UTILITY: Max width container
+   ========================================== */
+.container-max {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 640px) {
+  .container-max {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-max {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
