@@ -12,15 +12,15 @@
 const certificationsData = [
   {
     id: 1,
-    title: "AWS Certified Cloud Practitioner",
-    description: "Foundational cloud concepts, AWS services, security, and architecture best practices.",
-    image: "/images/certifications/aws-ccp.jpg", // TODO: replace with your certificate scan
+    title: "SQL (Intermediate)",
+    description: "Intermediate data manipulation and querying.",
+    image: "/images/certifications/sq.jpg",
   },
   {
     id: 2,
-    title: "Meta Front-End Developer",
-    description: "Professional front-end development with React, JavaScript, and UI/UX design principles.",
-    image: "/images/certifications/meta-frontend.jpg",
+    title: "Data Fundamentals",
+    description: "Core concepts of data analysis.",
+    image: "/images/certifications/data fundamental.jpg",
   },
   {
     id: 3,

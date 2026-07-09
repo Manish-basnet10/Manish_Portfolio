@@ -9,20 +9,24 @@ function ServiceCard({ service }) {
   return (
     <div
       className="service-card relative rounded-2xl overflow-hidden border border-transparent cursor-default"
-      style={{ minHeight: "220px", background: service.gradient }}
+      style={{ minHeight: "220px", backgroundColor: "#1f2937" }}
       aria-label={`Service: ${service.title}`}
     >
-      {/* Gradient background overlay */}
+      {/* Service AI image background */}
       <div
         className="service-img absolute inset-0"
-        style={{ background: service.gradient }}
+        style={{ 
+          backgroundImage: `url(${service.image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
         aria-hidden="true"
       />
 
       {/* Dark overlay for text contrast */}
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%)" }}
+        style={{ background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.2) 100%)" }}
         aria-hidden="true"
       />
 
