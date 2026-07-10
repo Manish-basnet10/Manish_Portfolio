@@ -4,6 +4,7 @@
 
 import React, { useState } from "react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import developerData from "../data/developerData";
 
 // Icon components
 function LocationIcon() {
@@ -37,20 +38,20 @@ const contactInfo = [
     id: "address",
     icon: <LocationIcon />,
     label: "Address",
-    value: "Kathmandu, Nepal", // TODO: Replace with your actual address
+    value: developerData.contact.address,
   },
   {
     id: "phone",
     icon: <PhoneIcon />,
     label: "Phone",
-    value: "+977-9869417950  ·  +91-7300449730",
+    value: developerData.contact.phone,
   },
   {
     id: "email",
     icon: <MailIcon />,
     label: "Email",
-    value: "manishbasnet476@gmail.com",
-    href: "mailto:manishbasnet476@gmail.com",
+    value: developerData.contact.email,
+    href: `mailto:${developerData.contact.email}`,
   },
 ];
 
