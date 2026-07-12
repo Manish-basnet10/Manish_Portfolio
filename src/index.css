@@ -286,6 +286,33 @@ section[id] {
 }
 
 /* ==========================================
+   SKILL CARD HOVER (desktop only)
+   ========================================== */
+@media (hover: hover) {
+  .skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .skill-card:hover .skill-icon-circle {
+    transform: scale(1.08);
+  }
+}
+
+.skill-card:active {
+  opacity: 0.92;
+  transform: scale(0.98);
+}
+
+.skill-icon-circle {
+  transition: transform 0.3s ease;
+}
+
+/* ==========================================
    FORM INPUTS
    ========================================== */
 .form-input {

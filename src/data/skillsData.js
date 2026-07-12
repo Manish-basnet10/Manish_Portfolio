@@ -2,7 +2,11 @@
 // DATA FILE: skillsData.js
 // Edit these arrays to update your Skills section.
 // Each category renders as a separate card.
-// Each skill has: name (string), icon (SVG path or URL string)
+// Each skill has:
+//   - name (string): display label
+//   - icon (string): single icon URL
+//   - icons (string[]): array of icon URLs for grouped skills
+// Use either `icon` or `icons`, not both.
 // ============================================================
 
 const skillsData = [
@@ -26,16 +30,18 @@ const skillsData = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
       },
       {
-        name: "C++",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+        name: "C / C++",
+        icons: [
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+        ],
       },
       {
-        name: "HTML5",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      },
-      {
-        name: "CSS3",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        name: "HTML & CSS",
+        icons: [
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        ],
       },
       {
         name: "React",
@@ -45,15 +51,15 @@ const skillsData = [
         name: "Next.js",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
       },
-      {
-        name: "Node.js",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      },
     ],
   },
   {
     category: "Backend Management Skills",
     skills: [
+      {
+        name: "Node.js",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      },
       {
         name: "Spring Boot",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
@@ -74,14 +80,10 @@ const skillsData = [
         name: "Nginx",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
       },
-      {
-        name: "Linux",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-      },
     ],
   },
   {
-    category: "Cloud Technologies & DevOps Tools",
+    category: "Cloud & DevOps",
     skills: [
       {
         name: "AWS",
@@ -96,16 +98,19 @@ const skillsData = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
       },
       {
-        name: "Git",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-      },
-      {
-        name: "GitHub",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        name: "Git & GitHub",
+        icons: [
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        ],
       },
       {
         name: "Terraform",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
+      },
+      {
+        name: "Linux",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
       },
     ],
   },
