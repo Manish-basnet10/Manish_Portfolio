@@ -164,15 +164,15 @@ function Navbar({ isDark, onToggle }) {
   };
 
   const navBg = isDark
-    ? "bg-gray-900 border-gray-700"
-    : "bg-[#f7f1e8] border-[#e4ddd2]";
+    ? "bg-gray-900/80 border-gray-800/80 backdrop-blur-md shadow-sm"
+    : "bg-white/80 border-[#e4ddd2]/60 backdrop-blur-md shadow-sm";
 
   const textColor = isDark ? "text-gray-100" : "text-[#1e2a3a]";
 
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 ${navBg} border-b transition-colors duration-300`}
+        className={`fixed top-0 left-0 right-0 z-50 ${navBg} border-b transition-all duration-300`}
         role="navigation"
         aria-label="Main navigation"
       >

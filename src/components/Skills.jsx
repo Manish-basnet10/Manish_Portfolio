@@ -83,7 +83,7 @@ function Skills({ isDark }) {
             >
               {/* Category Heading */}
               <h3
-                className={`text-base sm:text-lg font-bold mb-5 pb-3 border-b ${
+                className={`text-base sm:text-lg font-bold mb-5 pb-3 border-b text-center ${
                   isDark ? "border-gray-700" : "border-[#e4ddd2]"
                 } ${categoryLabelColor}`}
                 style={{ fontFamily: "'Baloo 2', cursive" }}

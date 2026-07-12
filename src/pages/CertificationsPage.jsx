@@ -10,8 +10,8 @@ function CertCard({ cert, isDark, onClick }) {
   return (
     <article
       onClick={onClick}
-      className="cert-card rounded-2xl overflow-hidden shadow-md relative cursor-pointer"
-      style={{ aspectRatio: "4 / 3", backgroundColor: isDark ? "#374151" : "#d4c9b8" }}
+      className="cert-card rounded-3xl overflow-hidden shadow-lg relative cursor-pointer"
+      style={{ aspectRatio: "3 / 4", backgroundColor: isDark ? "#374151" : "#d4c9b8" }}
       aria-label={`Certificate: ${cert.title}. ${cert.description}`}
       role="button"
       tabIndex={0}
@@ -27,7 +27,7 @@ function CertCard({ cert, isDark, onClick }) {
         src={cert.image}
         alt={`${cert.title} certificate — ${cert.description}`}
         loading="lazy"
-        className="cert-img absolute inset-0 w-full h-full object-cover"
+        className="cert-img absolute inset-0 w-full h-full object-cover object-center"
         onError={(e) => {
           e.target.style.display = "none";
           e.target.nextSibling.style.display = "flex";
@@ -52,19 +52,26 @@ function CertCard({ cert, isDark, onClick }) {
       {/* Dark gradient overlay for text legibility */}
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.05) 100%)" }}
+        style={{ background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.05) 100%)" }}
         aria-hidden="true"
       />
 
       {/* Text overlay */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+      <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 flex flex-col justify-end items-center text-center">
         <h3
-          className="font-bold text-white text-sm sm:text-base leading-snug mb-1"
-          style={{ fontFamily: "'Baloo 2', cursive" }}
+          className="font-bold text-white text-base sm:text-lg leading-snug line-clamp-2 text-center justify-center w-full"
+          style={{ 
+            fontFamily: "'Baloo 2', cursive", 
+            minHeight: "3.25rem", 
+            display: "flex", 
+            alignItems: "flex-end",
+            justifyContent: "center",
+            marginBottom: "0.5rem"
+          }}
         >
           {cert.title}
         </h3>
-        <p className="text-xs sm:text-sm text-white/80 leading-snug line-clamp-2">
+        <p className="text-xs sm:text-sm text-white/80 leading-snug line-clamp-2 text-center w-full">
           {cert.description}
         </p>
       </div>
@@ -96,18 +103,18 @@ function CertificationsPage({ isDark }) {
   const mutedText = isDark ? "text-gray-400" : "text-[#5c6b7a]";
 
   return (
-    <main id="main-content" className="min-h-screen pt-20 pb-16">
+    <main id="main-content" className="min-h-screen pt-24 pb-20">
       <div className="container-max">
         {/* Page Header */}
-        <div className="text-center mb-12 pt-8 scroll-animate">
+        <div className="text-center mb-16 pt-8 scroll-animate">
           <p
-            className="text-xs font-bold tracking-widest uppercase mb-2"
-            style={{ color: "#d97a4a" }}
+            className="text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 text-center"
+            style={{ color: "#457b9d" }}
           >
             ACHIEVEMENTS
           </p>
           <h1
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-5 text-center"
             style={{
               fontFamily: "'Baloo 2', cursive",
               color: isDark ? "#f3f4f6" : "#1e2a3a",
@@ -115,14 +122,13 @@ function CertificationsPage({ isDark }) {
           >
             Certificate Gallery
           </h1>
-          <p className={`text-sm sm:text-base max-w-2xl mx-auto ${mutedText}`}>
-            A collection of professional certifications and achievements that reflect my
-            commitment to continuous learning and technical excellence.
+          <p className={`text-sm sm:text-base md:text-lg max-w-3xl mx-auto text-center leading-relaxed ${mutedText}`}>
+            A collection of certifications, bootcamps, internships, and technical learning milestones across software engineering, cloud, cybersecurity, and programming.
           </p>
         </div>
 
         {/* Certifications Grid: 1 col → 2 col → 4 col */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {certificationsData.map((cert, idx) => (
             <div
               key={cert.id}

@@ -89,39 +89,39 @@ function Hero({ isDark }) {
 
   return (
     <section
-      className="relative pt-24 pb-14 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24"
+      className="relative pt-28 pb-16 md:pt-32 md:pb-24 lg:pt-36 lg:pb-28"
       aria-label="Hero introduction"
     >
       <div className="container-max">
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
+        <div className="max-w-[1150px] mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-12">
           {/* ===== TEXT BLOCK ===== */}
           <div className="flex-1 text-center lg:text-left scroll-animate">
             {/* Overline */}
             <p
-              className="text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3"
+              className="text-xs sm:text-sm md:text-base font-semibold tracking-widest uppercase mb-4"
               style={{ color: "#1e2a3a", opacity: isDark ? 0.8 : 1 }}
             >
               {developerData.title}
             </p>
 
             {/* Greeting */}
-            <p className={`text-base sm:text-lg mb-1 font-medium ${mutedText}`}>
+            <p className={`text-base sm:text-lg md:text-xl mb-2 font-medium ${mutedText}`}>
               Hi, it's me
             </p>
 
             {/* Name Heading */}
             <h1
-              className="font-extrabold leading-tight mb-5"
+              className="font-extrabold leading-tight mb-6"
               style={{ fontFamily: "'Baloo 2', cursive" }}
             >
               <span
-                className="text-4xl sm:text-5xl lg:text-6xl"
+                className="text-5xl sm:text-6xl lg:text-7xl"
                 style={{ color: isDark ? "#f3f4f6" : "#1e2a3a" }}
               >
                 I'm{" "}
               </span>
               <span
-                className="text-4xl sm:text-5xl lg:text-6xl"
+                className="text-5xl sm:text-6xl lg:text-7xl"
                 style={{ color: "#d97a4a" }}
               >
                 {developerData.name}
@@ -129,16 +129,16 @@ function Hero({ isDark }) {
             </h1>
 
             {/* Bio */}
-            <p className={`text-sm sm:text-base leading-relaxed max-w-lg mx-auto lg:mx-0 mb-7 ${mutedText}`}>
+            <p className={`text-sm sm:text-base md:text-[1.05rem] lg:text-[1.15rem] leading-relaxed max-w-xl lg:max-w-2xl mx-auto lg:mx-0 mb-8 ${mutedText}`}>
               {developerData.bio}
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-8 flex-wrap">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8 flex-wrap">
               <a
                 href={developerData.resumeUrl}
-                className="btn-primary w-full sm:w-auto px-7 py-3 rounded-full font-semibold text-sm text-white text-center no-underline"
-                style={{ backgroundColor: "#d97a4a", minHeight: "44px", display: "flex", alignItems: "center", justifyContent: "center" }}
+                className="btn-primary w-full sm:w-auto px-8 py-3.5 rounded-full font-semibold text-sm sm:text-base text-white text-center no-underline"
+                style={{ backgroundColor: "#d97a4a", minHeight: "48px", display: "flex", alignItems: "center", justifyContent: "center" }}
                 aria-label={`View ${developerData.name}'s resume (PDF)`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -147,11 +147,11 @@ function Hero({ isDark }) {
               </a>
               <a
                 href={developerData.socials.whatsapp}
-                className="btn-secondary w-full sm:w-auto px-7 py-3 rounded-full font-semibold text-sm text-center no-underline"
+                className="btn-secondary w-full sm:w-auto px-8 py-3.5 rounded-full font-semibold text-sm sm:text-base text-center no-underline"
                 style={{
                   backgroundColor: isDark ? "#374151" : "#e4ddd2",
                   color: isDark ? "#f3f4f6" : "#1e2a3a",
-                  minHeight: "44px",
+                  minHeight: "48px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -165,25 +165,25 @@ function Hero({ isDark }) {
             </div>
 
             {/* Stat Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 max-w-md lg:max-w-xl mx-auto lg:mx-0">
               {statCards.map((card) => (
                 <div
                   key={card.title}
-                  className={`${cardBg} rounded-2xl p-4 shadow-sm text-left`}
+                  className={`${cardBg} rounded-2xl p-5 shadow-sm text-left`}
                 >
                   <p
-                    className="font-bold text-sm mb-0.5"
+                    className="font-bold text-base md:text-lg mb-1"
                     style={{ color: "#d97a4a", fontFamily: "'Baloo 2', cursive" }}
                   >
                     {card.title}
                   </p>
-                  <p className={`text-xs leading-snug ${mutedText}`}>{card.description}</p>
+                  <p className={`text-xs sm:text-sm leading-snug ${mutedText}`}>{card.description}</p>
                 </div>
               ))}
             </div>
 
             {/* Social Icons */}
-            <div className="flex items-center justify-center lg:justify-start gap-3 flex-wrap">
+            <div className="flex items-center justify-center lg:justify-start gap-3.5 flex-wrap">
               {socialLinks.map((s) => (
                 <a
                   key={s.label}
@@ -193,8 +193,8 @@ function Hero({ isDark }) {
                   aria-label={`${developerData.name} on ${s.label}`}
                   className={`social-icon flex items-center justify-center rounded-full ${iconBg} shadow-sm`}
                   style={{
-                    width: "44px",
-                    height: "44px",
+                    width: "48px",
+                    height: "48px",
                     color: isDark ? "#d1d5db" : "#1e2a3a",
                   }}
                 >
@@ -211,10 +211,10 @@ function Hero({ isDark }) {
               <div
                 className={`absolute rounded-3xl ${imageBg}`}
                 style={{
-                  width: "clamp(220px, 50vw, 380px)",
-                  height: "clamp(260px, 60vw, 460px)",
-                  top: "16px",
-                  left: "16px",
+                  width: "clamp(300px, 32vw, 420px)",
+                  height: "clamp(450px, 48vw, 640px)",
+                  top: "18px",
+                  left: "18px",
                 }}
                 aria-hidden="true"
               />
@@ -222,8 +222,8 @@ function Hero({ isDark }) {
               <div
                 className="relative rounded-3xl overflow-hidden shadow-2xl"
                 style={{
-                  width: "clamp(220px, 50vw, 380px)",
-                  height: "clamp(260px, 60vw, 460px)",
+                  width: "clamp(300px, 32vw, 420px)",
+                  height: "clamp(450px, 48vw, 640px)",
                   backgroundColor: isDark ? "#374151" : "#c8bfb2",
                 }}
               >

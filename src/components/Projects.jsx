@@ -64,14 +64,14 @@ function ProjectCard({ project, isDark }) {
       </div>
 
       {/* Card Body */}
-      <div className="p-5 flex flex-col flex-1 gap-3">
+      <div className="p-5 flex flex-col flex-1 gap-3 text-center items-center">
         <h3
-          className={`font-bold text-base sm:text-lg leading-snug ${titleColor}`}
+          className={`font-bold text-base sm:text-lg leading-snug text-center w-full ${titleColor}`}
           style={{ fontFamily: "'Baloo 2', cursive" }}
         >
           {project.name}
         </h3>
-        <p className={`text-sm leading-relaxed flex-1 ${mutedText}`}>
+        <p className={`text-sm leading-relaxed flex-1 text-center ${mutedText}`}>
           {project.description}
         </p>
 

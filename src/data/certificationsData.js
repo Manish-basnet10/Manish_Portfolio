@@ -24,15 +24,33 @@ const certificationsData = [
   },
   {
     id: 3,
-    title: "Google Data Analytics",
-    description: "Data analysis, SQL, Tableau, R programming, and data-driven decision making.",
-    image: "/images/certifications/google-data.jpg",
+    title: "SQL (Advanced)",
+    description: "Advanced database querying and optimization.",
+    image: "/images/certifications/sql advance.jpg",
   },
   {
     id: 4,
-    title: "Docker Certified Associate",
-    description: "Container orchestration, Docker Compose, Swarm, and production deployment strategies.",
-    image: "/images/certifications/docker.jpg",
+    title: "Introduction to computer vision concepts",
+    description: "Foundational concepts of computer vision.",
+    image: "/images/certifications/computer-vision.jpg",
+  },
+  {
+    id: 5,
+    title: "Get started with Microsoft data analytics",
+    description: "Fundamentals of data analytics platforms.",
+    image: "/images/certifications/data-analytics.jpg",
+  },
+  {
+    id: 6,
+    title: "Introduction to machine learning concepts",
+    description: "Basic principles of machine learning.",
+    image: "/images/certifications/machine-learning.jpg",
+  },
+  {
+    id: 7,
+    title: "Java Mastery: Beginner's Guide and Full-Stack AI Projects",
+    description: "Java development and AI integration.",
+    image: "/images/certifications/java-mastery-ai.jpg",
   },
 ];
 
