@@ -105,24 +105,47 @@ function CertificationsPage({ isDark }) {
   return (
     <main id="main-content" className="min-h-screen pt-24 pb-20">
       <div className="container-max">
-        {/* Page Header */}
-        <div className="text-center mb-16 pt-8 scroll-animate">
+        {/* ─── Page Header: Three-tier centered layout (matches Skills) ─── */}
+        <div className="text-center pt-8 scroll-animate" style={{ marginBottom: "50px" }}>
+          {/* Small accent label */}
           <p
-            className="text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 text-center"
-            style={{ color: "#457b9d" }}
+            className="uppercase font-medium"
+            style={{
+              fontSize: "14px",
+              letterSpacing: "6px",
+              color: "#457b9d",
+              marginBottom: "18px",
+            }}
           >
             ACHIEVEMENTS
           </p>
+
+          {/* Hero heading */}
           <h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-5 text-center"
             style={{
               fontFamily: "'Baloo 2', cursive",
+              fontWeight: 800,
+              lineHeight: 1.1,
               color: isDark ? "#f3f4f6" : "#1e2a3a",
+              maxWidth: "900px",
+              margin: "0 auto 12px",
+              fontSize: "clamp(34px, 5vw, 60px)",
             }}
           >
             Certificate Gallery
           </h1>
-          <p className={`text-sm sm:text-base md:text-lg max-w-3xl mx-auto text-center leading-relaxed ${mutedText}`}>
+
+          {/* Description */}
+          <p
+            className={mutedText}
+            style={{
+              maxWidth: "900px",
+              margin: "0 auto",
+              fontSize: "clamp(13px, 1.5vw, 15px)",
+              lineHeight: 1.7,
+              fontWeight: 400,
+            }}
+          >
             A collection of certifications, bootcamps, internships, and technical learning milestones across software engineering, cloud, cybersecurity, and programming.
           </p>
         </div>

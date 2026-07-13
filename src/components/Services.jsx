@@ -9,7 +9,7 @@ function ServiceCard({ service }) {
   return (
     <div
       className="service-card relative rounded-3xl overflow-hidden border border-white/5 cursor-default shadow-md group"
-      style={{ minHeight: "320px", backgroundColor: "#1f2937" }}
+      style={{ aspectRatio: "3 / 4", backgroundColor: "#1f2937" }}
       aria-label={`Service: ${service.title}`}
     >
       {/* Service AI image background */}
@@ -31,7 +31,7 @@ function ServiceCard({ service }) {
       />
 
       {/* Content */}
-      <div className="relative z-10 p-6 flex flex-col justify-between h-full items-center text-center" style={{ minHeight: "320px" }}>
+      <div className="relative z-10 p-5 flex flex-col justify-between h-full items-center text-center">
         {/* Tag pill */}
         <span
           className="self-center px-3 py-1.5 rounded-full text-[10px] font-bold tracking-widest uppercase"
@@ -43,10 +43,10 @@ function ServiceCard({ service }) {
         {/* Title + Description at bottom */}
         <div className="mt-auto w-full flex flex-col items-center">
           <h3
-            className="text-lg sm:text-xl font-bold text-white mb-2 leading-snug text-center justify-center w-full"
+            className="text-base sm:text-lg font-bold text-white mb-2 leading-snug text-center justify-center w-full"
             style={{ 
               fontFamily: "'Baloo 2', cursive",
-              minHeight: "3.5rem",
+              minHeight: "3rem",
               display: "flex",
               alignItems: "flex-end",
               justifyContent: "center"
@@ -54,7 +54,7 @@ function ServiceCard({ service }) {
           >
             {service.title}
           </h3>
-          <p className="text-sm text-white/80 leading-relaxed line-clamp-3 text-center">
+          <p className="text-xs sm:text-sm text-white/80 leading-relaxed line-clamp-3 text-center">
             {service.description}
           </p>
         </div>
@@ -71,32 +71,58 @@ function Services({ isDark }) {
   return (
     <section
       id="services"
-      className="py-14 md:py-20 lg:py-24"
       aria-labelledby="services-heading"
+      style={{ paddingTop: "70px", paddingBottom: "80px" }}
     >
       <div className="container-max">
-        {/* Section Header */}
-        <div className="text-center mb-16 scroll-animate">
+        {/* ─── Section Header: Three-tier centered layout (matches Skills) ─── */}
+        <div className="text-center scroll-animate" style={{ marginBottom: "50px" }}>
+          {/* Small accent label */}
           <p
-            className="text-xs font-bold tracking-widest uppercase mb-2"
-            style={{ color: "#d97a4a" }}
+            className="uppercase font-medium"
+            style={{
+              fontSize: "14px",
+              letterSpacing: "6px",
+              color: "#d97a4a",
+              marginBottom: "18px",
+            }}
           >
             EXPERTISE
           </p>
+
+          {/* Hero heading */}
           <h2
             id="services-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4"
-            style={{ fontFamily: "'Baloo 2', cursive", color: isDark ? "#f3f4f6" : "#1e2a3a" }}
+            style={{
+              fontFamily: "'Baloo 2', cursive",
+              fontWeight: 800,
+              lineHeight: 1.1,
+              color: isDark ? "#f3f4f6" : "#1e2a3a",
+              maxWidth: "900px",
+              margin: "0 auto 12px",
+              fontSize: "clamp(34px, 5vw, 60px)",
+            }}
           >
             Services I Offer
           </h2>
-          <p className={`text-base sm:text-lg max-w-2xl mx-auto leading-relaxed ${mutedText}`}>
+
+          {/* Description */}
+          <p
+            className={mutedText}
+            style={{
+              maxWidth: "900px",
+              margin: "0 auto",
+              fontSize: "clamp(13px, 1.5vw, 15px)",
+              lineHeight: 1.7,
+              fontWeight: 400,
+            }}
+          >
             From ideation to deployment — I bring full-cycle engineering expertise to every project.
           </p>
         </div>
 
-        {/* Cards Grid: 3 columns on desktop for larger, more unique cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Cards Grid: 4 columns on desktop for balanced card sizing */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
           {servicesData.map((service, idx) => (
             <div
               key={service.id}

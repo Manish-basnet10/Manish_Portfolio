@@ -13,21 +13,21 @@
 const projectsData = [
   {
     id: 1,
-    name: "E-Commerce Platform",
+    name: "BloodBond: Life Saving Network",
     description:
-      "A full-featured e-commerce web app with product catalogue, cart, Stripe payments, and an admin dashboard. Built with React, Node.js, MongoDB, and deployed on AWS.",
-    image: "/images/projects/ecommerce.jpg",
-    liveDemoLink: "#", // TODO: replace with your live URL
-    githubLink: "#",  // TODO: replace with your GitHub repo URL
+      "A real-time platform connecting blood donors with hospitals. Built on the MERN stack, it features automated location-based donor matching, live inventory tracking, and urgent alerts.",
+    image: "/images/projects/blood_donation.jpg",
+    liveDemoLink: "https://blood-donation-ruddy-delta.vercel.app/", // TODO: replace with your live URL
+    githubLink: "https://github.com/Manish-basnet10/Blood_Donation",  // TODO: replace with your GitHub repo URL
   },
   {
-    id: 2,
-    name: "Task Management App",
+    id: 3,
+    name: "FashionStore",
     description:
-      "A real-time collaborative task board (Kanban-style) with drag-and-drop, user authentication, WebSocket live updates, and team workspaces. Stack: Next.js, PostgreSQL, Prisma.",
-    image: "/images/projects/taskmanager.jpg",
-    liveDemoLink: "#",
-    githubLink: "#",
+      "A complete fashion e-commerce platform built with the MERN stack. It features a seamless order flow, an integrated customer review system, and a comprehensive admin dashboard for store management.",
+    image: "/images/projects/fashionstore.jpg",
+    liveDemoLink: "https://e-commerce-clothing-store-frontend.vercel.app/",
+    githubLink: "https://github.com/Manish-basnet10/fashionstore_mern_project",
   },
   {
     id: 3,

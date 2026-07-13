@@ -35,10 +35,10 @@ function ProjectCard({ project, isDark }) {
       className={`card-hover ${cardBg} rounded-2xl overflow-hidden shadow-sm flex flex-col`}
       aria-label={`Project: ${project.name}`}
     >
-      {/* Image — 16:9 */}
+      {/* Image — 4:3 for taller cards */}
       <div
         className={`relative overflow-hidden ${imgBg}`}
-        style={{ paddingBottom: "56.25%" }}
+        style={{ paddingBottom: "65%" }}
       >
         <img
           src={project.image}
@@ -64,19 +64,19 @@ function ProjectCard({ project, isDark }) {
       </div>
 
       {/* Card Body */}
-      <div className="p-5 flex flex-col flex-1 gap-3 text-center items-center">
+      <div className="p-5 flex flex-col flex-1" style={{ gap: "12px" }}>
         <h3
-          className={`font-bold text-base sm:text-lg leading-snug text-center w-full ${titleColor}`}
+          className={`font-bold text-base sm:text-lg leading-snug w-full ${titleColor}`}
           style={{ fontFamily: "'Baloo 2', cursive" }}
         >
           {project.name}
         </h3>
-        <p className={`text-sm leading-relaxed flex-1 text-center ${mutedText}`}>
+        <p className={`text-sm leading-relaxed ${mutedText}`}>
           {project.description}
         </p>
 
-        {/* Action buttons */}
-        <div className="flex flex-col sm:flex-row gap-2 pt-1 flex-wrap">
+        {/* Action buttons — pinned to bottom */}
+        <div className="flex flex-col sm:flex-row gap-2 mt-auto" style={{ paddingTop: "4px" }}>
           <a
             href={project.liveDemoLink}
             target="_blank"
@@ -115,32 +115,59 @@ function Projects({ isDark }) {
   return (
     <section
       id="projects"
-      className="py-14 md:py-20 lg:py-24"
       aria-labelledby="projects-heading"
+      style={{ paddingTop: "70px", paddingBottom: "80px" }}
     >
       <div className="container-max">
-        {/* Section Header */}
-        <div className="text-center mb-12 scroll-animate">
+        {/* ─── Section Header: Three-tier centered layout (matches Skills) ─── */}
+        <div className="text-center scroll-animate" style={{ marginBottom: "50px" }}>
+          {/* Small accent label */}
           <p
-            className="text-xs font-bold tracking-widest uppercase mb-2"
-            style={{ color: "#d97a4a" }}
+            className="uppercase font-medium"
+            style={{
+              fontSize: "14px",
+              letterSpacing: "6px",
+              color: "#d97a4a",
+              marginBottom: "18px",
+            }}
           >
             PORTFOLIO
           </p>
+
+          {/* Hero heading */}
           <h2
             id="projects-heading"
-            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-3"
-            style={{ fontFamily: "'Baloo 2', cursive", color: isDark ? "#f3f4f6" : "#1e2a3a" }}
+            style={{
+              fontFamily: "'Baloo 2', cursive",
+              fontWeight: 800,
+              lineHeight: 1.1,
+              color: isDark ? "#f3f4f6" : "#1e2a3a",
+              maxWidth: "900px",
+              margin: "0 auto 12px",
+              fontSize: "clamp(34px, 5vw, 60px)",
+            }}
           >
             Projects and Recent Work
           </h2>
-          <p className={`text-sm sm:text-base max-w-xl mx-auto ${mutedText}`}>
+
+          {/* Description */}
+          <p
+            className={mutedText}
+            style={{
+              maxWidth: "900px",
+              margin: "0 auto",
+              fontSize: "clamp(13px, 1.5vw, 15px)",
+              lineHeight: 1.7,
+              fontWeight: 400,
+            }}
+          >
             A selection of projects that showcase my problem-solving approach, technical breadth,
             and attention to detail.
           </p>
         </div>
 
-        {/* Projects Grid */}
+        {/* Projects Grid — inset from edges for balanced spacing */}
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projectsData.map((project, idx) => (
             <div
@@ -151,6 +178,7 @@ function Projects({ isDark }) {
               <ProjectCard project={project} isDark={isDark} />
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>

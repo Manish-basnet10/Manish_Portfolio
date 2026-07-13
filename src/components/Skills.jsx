@@ -114,11 +114,11 @@ function Skills({ isDark }) {
     <section
       id="skills"
       aria-labelledby="skills-heading"
-      style={{ paddingTop: "100px", paddingBottom: "120px" }}
+      style={{ paddingTop: "70px", paddingBottom: "80px" }}
     >
       <div className="container-max">
         {/* ─── Section Header: Three-tier centered layout ─── */}
-        <div className="text-center scroll-animate" style={{ marginBottom: "80px" }}>
+        <div className="text-center scroll-animate" style={{ marginBottom: "50px" }}>
           {/* Small accent label */}
           <p
             className="uppercase font-medium"
@@ -141,7 +141,7 @@ function Skills({ isDark }) {
               lineHeight: 1.1,
               color: isDark ? "#f3f4f6" : "#1e2a3a",
               maxWidth: "900px",
-              margin: "0 auto 18px",
+              margin: "0 auto 12px",
               fontSize: "clamp(34px, 5vw, 60px)",
             }}
           >
@@ -152,9 +152,9 @@ function Skills({ isDark }) {
           <p
             className={mutedText}
             style={{
-              maxWidth: "700px",
+              maxWidth: "900px",
               margin: "0 auto",
-              fontSize: "clamp(16px, 2vw, 20px)",
+              fontSize: "clamp(13px, 1.5vw, 15px)",
               lineHeight: 1.7,
               fontWeight: 400,
             }}
