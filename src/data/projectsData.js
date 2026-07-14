@@ -15,37 +15,55 @@ const projectsData = [
     id: 1,
     name: "BloodBond: Life Saving Network",
     description:
-      "A real-time platform connecting blood donors with hospitals. Built on the MERN stack, it features automated location-based donor matching, live inventory tracking, and urgent alerts.",
+      "A MERN-stack platform that connects blood donors with hospitals in real time. Features include automated location-based donor matching, live blood-bank inventory tracking, and instant urgent-need alerts.",
     image: "/images/projects/blood_donation.jpg",
-    liveDemoLink: "https://blood-donation-ruddy-delta.vercel.app/", // TODO: replace with your live URL
-    githubLink: "https://github.com/Manish-basnet10/Blood_Donation",  // TODO: replace with your GitHub repo URL
+    liveDemoLink: "https://blood-donation-ruddy-delta.vercel.app/",
+    githubLink: "https://github.com/Manish-basnet10/Blood_Donation",
   },
   {
-    id: 3,
+    id: 2,
     name: "FashionStore",
     description:
-      "A complete fashion e-commerce platform built with the MERN stack. It features a seamless order flow, an integrated customer review system, and a comprehensive admin dashboard for store management.",
+      "A full-featured fashion e-commerce app built on the MERN stack. Includes a smooth cart-to-checkout flow, an integrated customer review system, and a powerful admin dashboard for managing products and orders.",
     image: "/images/projects/fashionstore.jpg",
     liveDemoLink: "https://e-commerce-clothing-store-frontend.vercel.app/",
     githubLink: "https://github.com/Manish-basnet10/fashionstore_mern_project",
   },
   {
     id: 3,
-    name: "DevOps Dashboard",
+    name: "Customer Churn Analysis",
     description:
-      "An internal observability dashboard that aggregates logs, metrics, and deployment status from AWS CloudWatch and GitHub Actions. Built with React, Express, and Chart.js.",
-    image: "/images/projects/devops.jpg",
-    liveDemoLink: "#",
-    githubLink: "#",
+      "An interactive Power BI dashboard that uncovers customer retention and attrition patterns. Combines multi-source data integration with dynamic visualizations and KPI metrics to pinpoint the key drivers behind churn.",
+    image: "/images/projects/churn_analysis.jpg",
+    liveDemoLink: "https://github.com/Manish-basnet10/Customer_Churn_Analysis",
+    githubLink: "https://github.com/Manish-basnet10/Customer_Churn_Analysis",
   },
   {
     id: 4,
-    name: "AI Chat Assistant",
+    name: "Parkinson's Disease Prediction",
     description:
-      "A conversational AI assistant powered by OpenAI GPT-4, with persistent conversation history, markdown rendering, and a clean chat UI. Stack: React, FastAPI, Redis.",
-    image: "/images/projects/aichat.jpg",
+      "A Python and Streamlit web app that predicts Parkinson's disease from biomedical voice data. Uses a trained Support Vector Machine model to analyze vocal measurements and deliver instant diagnostic predictions.",
+    image: "/images/projects/parkinsons_prediction.jpg",
+    liveDemoLink: "https://github.com/Manish-basnet10/Parkinson-s_Disease_Prediction",
+    githubLink: "https://github.com/Manish-basnet10/Parkinson-s_Disease_Prediction",
+  },
+  {
+    id: 5,
+    name: "Farmer Cooperative System",
+    description:
+      "A Spring Boot backend system designed for agricultural cooperatives. Manages farmer registrations, tracks shared resources and equipment, and streamlines day-to-day cooperative operations through RESTful APIs.",
+    image: "/images/projects/farmer_cooperative.jpg",
     liveDemoLink: "#",
-    githubLink: "#",
+    githubLink: "https://github.com/Manish-basnet10/farmer-cooperative-system",
+  },
+  {
+    id: 7,
+    name: "Spam Detection System",
+    description:
+      "An NLP-powered machine learning app that classifies text messages as spam or legitimate. Built with Python and Scikit-learn, it leverages TF-IDF vectorization and a trained classifier for high-accuracy filtering.",
+    image: "/images/projects/spam_detection.jpg",
+    liveDemoLink: "#",
+    githubLink: "https://github.com/Manish-basnet10/SPAM_DETECTION_PROJECT",
   },
 ];
 

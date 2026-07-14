@@ -71,7 +71,16 @@ function ProjectCard({ project, isDark }) {
         >
           {project.name}
         </h3>
-        <p className={`text-sm leading-relaxed ${mutedText}`}>
+        <p
+          className={`text-sm leading-relaxed ${mutedText}`}
+          style={{
+            display: "-webkit-box",
+            WebkitLineClamp: 4,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+            minHeight: "5.6em",
+          }}
+        >
           {project.description}
         </p>
 
