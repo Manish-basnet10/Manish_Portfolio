@@ -71,11 +71,11 @@ const socialLinks = [
 const statCards = [
   {
     title: "Full Stack",
-    description: "Web apps, backend systems, and end-to-end deployment",
+    description: "End-to-end web apps with React, Node.js & Spring Boot",
   },
   {
-    title: "Cloud & Ops",
-    description: "AWS foundations, APIs, and scalable delivery pipelines",
+    title: "Data Science",
+    description: "ML models, NLP, predictive analytics & data visualization",
   },
 ];
 
@@ -129,16 +129,19 @@ function Hero({ isDark }) {
             </h1>
 
             {/* Bio */}
-            <p className={`text-sm sm:text-base md:text-[1.05rem] lg:text-[1.15rem] leading-relaxed max-w-xl lg:max-w-2xl mx-auto lg:mx-0 mb-8 ${mutedText}`}>
+            <p
+              className={`text-xs sm:text-sm md:text-[0.9rem] lg:text-[0.95rem] leading-relaxed max-w-xl lg:max-w-2xl mx-auto lg:mx-0 mb-10 ${mutedText}`}
+              style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.01em" }}
+            >
               {developerData.bio}
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8 flex-wrap">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-6 mb-8 flex-wrap">
               <a
                 href={developerData.resumeUrl}
-                className="btn-primary w-full sm:w-auto px-8 py-3.5 rounded-full font-semibold text-sm sm:text-base text-white text-center no-underline"
-                style={{ backgroundColor: "#d97a4a", minHeight: "48px", display: "flex", alignItems: "center", justifyContent: "center" }}
+                className="btn-primary w-full sm:w-auto px-7 py-3 rounded-full font-medium text-xs sm:text-sm text-white text-center no-underline"
+                style={{ backgroundColor: "#d97a4a", minHeight: "44px", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Inter', sans-serif", letterSpacing: "0.03em" }}
                 aria-label={`View ${developerData.name}'s resume (PDF)`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -147,11 +150,13 @@ function Hero({ isDark }) {
               </a>
               <a
                 href={developerData.socials.whatsapp}
-                className="btn-secondary w-full sm:w-auto px-8 py-3.5 rounded-full font-semibold text-sm sm:text-base text-center no-underline"
+                className="btn-secondary w-full sm:w-auto px-7 py-3 rounded-full font-medium text-xs sm:text-sm text-center no-underline"
                 style={{
                   backgroundColor: isDark ? "#374151" : "#e4ddd2",
                   color: isDark ? "#f3f4f6" : "#1e2a3a",
-                  minHeight: "48px",
+                  minHeight: "44px",
+                  fontFamily: "'Inter', sans-serif",
+                  letterSpacing: "0.03em",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -177,7 +182,10 @@ function Hero({ isDark }) {
                   >
                     {card.title}
                   </p>
-                  <p className={`text-xs sm:text-sm leading-snug ${mutedText}`}>{card.description}</p>
+                  <p
+                    className={`text-[0.7rem] sm:text-xs leading-snug ${mutedText}`}
+                    style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.01em" }}
+                  >{card.description}</p>
                 </div>
               ))}
             </div>

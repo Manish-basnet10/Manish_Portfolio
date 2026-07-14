@@ -5,8 +5,8 @@
 
 const developerData = {
   name: "Manish Basnet",
-  title: "Software Engineer · Full Stack Developer · Tech Problem Solver",
-  bio: "I'm a passionate software engineer specialising in full-stack web development, cloud infrastructure, and scalable system design. I love turning complex problems into elegant, user-friendly solutions — from pixel-perfect frontends to robust backend architectures. Currently building things that matter and looking for exciting opportunities to grow and collaborate.",
+  title: "Software Engineer - Full Stack Developer - Data Science",
+  bio: "Full Stack Developer and Data Science Enthusiast with strong expertise in web development, machine learning, and predictive analytics. I build scalable, efficient, and user-friendly digital products that solve real-world problems.",
 
   // Path to your resume PDF. 
   // How to upload: Place your resume PDF file (e.g., "resume.pdf") in the "public" folder of this project.

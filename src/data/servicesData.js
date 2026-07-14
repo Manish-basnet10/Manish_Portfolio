@@ -9,7 +9,7 @@ const servicesData = [
     id: 1,
     tag: "BUILD",
     title: "Full Stack Development",
-    description: "End-to-end web applications with modern React frontends and robust Node.js or Spring Boot backends.",
+    description: "End to end web applications with modern React frontends and robust Node.js or Spring Boot backends.",
     gradient: "linear-gradient(135deg, #1e3a5f 0%, #2d6a8e 100%)",
     image: "/images/services/full_stack.png",
   },
