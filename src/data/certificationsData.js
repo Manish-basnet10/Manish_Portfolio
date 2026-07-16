@@ -18,9 +18,9 @@ const certificationsData = [
   },
   {
     id: 2,
-    title: "Data Fundamentals",
-    description: "Core concepts of data analysis.",
-    image: "/images/certifications/data fundamental.jpg",
+    title: "MERN Stack Internship with Capstone Project",
+    description: "Completed a hands-on MERN Stack internship, building full-stack web applications using MongoDB, Express.js, React, and Node.js through a capstone project.",
+    image: "/images/certifications/mern-stack-internship-capstone.jpg",
   },
   {
     id: 3,
@@ -51,6 +51,31 @@ const certificationsData = [
     title: "Java Mastery: Beginner's Guide and Full-Stack AI Projects",
     description: "Java development and AI integration.",
     image: "/images/certifications/java-mastery-ai.jpg",
+  },
+  {
+    id: 8,
+    title: "Java Course – Mastering the Fundamentals",
+    description: "Core Java programming, OOP concepts, and hands-on coding challenges.",
+    image: "/images/certifications/java-course-mastering-the-fundamentals.jpg",
+  },
+  {
+    id: 9,
+    title: "Mastering Data Structures & Algorithms using C and C++",
+    description: "Mastered data structures, algorithms, problem-solving techniques, and optimized coding using C and C++.",
+    image: "/images/certifications/mastering-dsa-c-cpp.jpg",
+  },
+
+  {
+    id: 10,
+    title: "IBM SkillsBuild – Data Fundamentals",
+    description: "Learned the fundamentals of data, data analysis, visualization, and data-driven decision-making through IBM SkillsBuild.",
+    image: "/images/certifications/ibm-data-fundamentals.jpg",
+  },
+  {
+    id: 11,
+    title: "C++ Programming Training – IIT Bombay",
+    description: "Core C++ programming, object-oriented concepts, and problem-solving through IIT Bombay's Spoken Tutorial Project.",
+    image: "/images/certifications/iitb-cpp-programming-training.jpg",
   },
 ];
 
