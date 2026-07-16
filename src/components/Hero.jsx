@@ -99,7 +99,7 @@ function Hero({ isDark }) {
             {/* Overline */}
             <p
               className="text-xs sm:text-sm md:text-base font-semibold tracking-widest uppercase mb-4"
-              style={{ color: "#1e2a3a", opacity: isDark ? 0.8 : 1 }}
+              style={{ color: isDark ? "#f3f4f6" : "#1e2a3a", opacity: isDark ? 0.8 : 1 }}
             >
               {developerData.title}
             </p>

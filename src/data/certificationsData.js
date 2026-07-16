@@ -77,6 +77,12 @@ const certificationsData = [
     description: "Core C++ programming, object-oriented concepts, and problem-solving through IIT Bombay's Spoken Tutorial Project.",
     image: "/images/certifications/iitb-cpp-programming-training.jpg",
   },
+  {
+    id: 12,
+    title: "Introduction to AI Concepts",
+    description: "AI fundamentals, machine learning basics, responsible AI, and practical AI applications.",
+    image: "/images/certifications/microsoft-introduction-to-ai-concepts.jpg",
+  },
 ];
 
 export default certificationsData;
